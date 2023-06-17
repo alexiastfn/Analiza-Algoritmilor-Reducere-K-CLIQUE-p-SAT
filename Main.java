@@ -8,21 +8,17 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        // File containing the input
+       
         File file = new File(args[0]);
         Scanner sc = new Scanner(file);
 
-        // Read the number of nodes from the first line
         int numNodes = sc.nextInt();
-      //  System.out.println("Number of nodes: " + numNodes);
         int k = sc.nextInt();
-      //  System.out.println("k: " + k);
         sc.nextLine();
 
-        // Initialize the adjacency matrix with zeroes
+        // matricea de adiacenta:
         int[][] adjMatrix = new int[numNodes + 1][numNodes + 1];
-
-        // Read the input file and fill in the adjacency matrix
+        
         for (int i = 1; i <= numNodes; i++) {
             String[] connections = sc.nextLine().split(" ");
             for (String s : connections) {
@@ -46,7 +42,7 @@ public class Main {
             }
         }
 
-        // primul punctulet
+        // primul punctulet:
 
         for(int i = 1; i <= k; i++) {
             String line = "";
